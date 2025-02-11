@@ -261,3 +261,12 @@ button:hover {
 .topic-grid a:hover {
   text-decoration: underline;
 }
+
+.no-change {
+  color: black;
+}
+
+.no-change:visited,
+.no-change:active {
+  color: black;
+}
