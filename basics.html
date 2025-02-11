@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lisp Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <div class="logo">Learn Lisp</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="basics.html" class="active">Basics</a></li>
+        <li><a href="functions.html">Functions</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="macros.html">Macros</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Basic Syntax</h1>
+    <div class="lesson">
+      <h2>Basic Syntax</h2>
+      <p>Lisp code is written as symbolic expressions (s-expressions) using prefix notation.</p>
+      <pre class="code-example">;; Basic arithmetic
+(+ 1 2 3)  ; Addition: 6
+(- 10 5)   ; Subtraction: 5
+(* 4 3)    ; Multiplication: 12
+(/ 15 3)   ; Division: 5</pre>
+
+      <h2>Variables</h2>
+      <pre class="code-example">;; Global variables
+(setq x 10)
+(defvar *global-var* 100)
+
+;; Local variables
+(let ((a 1)
+      (b 2))
+  (+ a b))</pre>
+
+      <h2>Conditionals</h2>
+      <pre class="code-example">;; If statement
+(if (> 5 3)
+    "True"
+    "False")
+
+;; When and Unless
+(when (> 5 3)
+  (print "Greater"))
+
+;; Cond - multiple conditions
+(cond ((< x 0) "Negative")
+      ((> x 0) "Positive")
+      (t "Zero"))</pre>
+
+      <h2>Comments</h2>
+      <pre class="code-example">;; Single line comment
+#| Multi-line
+   comment |#</pre>
+    </div>
+    <div class="navigation-buttons">
+      <a href="index.html" class="nav-button">← Back</a>
+      <a href="functions.html" class="nav-button">Next: Functions →</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

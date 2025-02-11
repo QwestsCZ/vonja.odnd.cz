@@ -1,8 +1,63 @@
+
+<!DOCTYPE html>
 <html>
 <head>
-  <title>My page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Learn Lisp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  Hello world
+  <nav class="main-nav">
+    <div class="nav-content">
+      <div class="logo">Learn Lisp</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li><a href="functions.html">Functions</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="macros.html">Macros</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="welcome-section">
+      <h1>Learn Lisp Programming</h1>
+      <h2>Welcome to Lisp Learning</h2>
+      <p>Start your journey into Lisp programming! Choose a topic below to begin learning.</p>
+    </div>
+    
+    <div class="topic-grid">
+      <a href="basics.html" class="topic-card">
+        <h3>Basic Syntax</h3>
+        <p>Learn the fundamentals of Lisp <a href="glossary.html#s-expression">s-expressions</a></p>
+      </a>
+      <a href="functions.html" class="topic-card">
+        <h3>Functions</h3>
+        <p>Master <a href="glossary.html#lambda">lambda</a> functions and definitions</p>
+      </a>
+      <a href="lists.html" class="topic-card">
+        <h3>Lists</h3>
+        <p>Understand <a href="glossary.html#cons">cons cells</a> and list manipulation</p>
+      </a>
+      <a href="macros.html" class="topic-card">
+        <h3>Macros</h3>
+        <p>Learn advanced <a href="glossary.html#macro">macro</a> programming</p>
+      </a>
+      <a href="practice.html" class="topic-card">
+        <h3>Practice</h3>
+        <p>Test your Lisp knowledge</p>
+      </a>
+      <a href="glossary.html" class="topic-card">
+        <h3>Glossary</h3>
+        <p>Reference for Lisp terminology</p>
+      </a>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

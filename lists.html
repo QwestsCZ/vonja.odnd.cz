@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lisp Lists</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <div class="logo">Learn Lisp</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li><a href="functions.html">Functions</a></li>
+        <li><a href="lists.html" class="active">Lists</a></li>
+        <li><a href="macros.html">Macros</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Lists in Lisp</h1>
+    <div class="lesson">
+      <h2>List Basics</h2>
+      <pre class="code-example">;; Creating lists
+(list 1 2 3 4)
+'(1 2 3 4)
+(cons 1 (cons 2 nil))
+
+;; Basic operations
+(car '(1 2 3))     ; First element: 1
+(cdr '(1 2 3))     ; Rest: (2 3)
+(nth 1 '(1 2 3))   ; Second element: 2
+(length '(1 2 3))  ; Length: 3</pre>
+
+      <h2>List Manipulation</h2>
+      <pre class="code-example">;; Adding elements
+(push 0 my-list)        ; Add to front
+(append '(1 2) '(3 4))  ; Combine lists
+(nconc list1 list2)     ; Destructive append
+
+;; Removing elements
+(remove 3 '(1 2 3 2 1)) ; Remove all 3s
+(delete 3 my-list)      ; Destructive remove</pre>
+
+      <h2>List Processing</h2>
+      <pre class="code-example">;; Mapping
+(mapcar #'1+ '(1 2 3))     ; Add 1 to each
+(maplist #'length '(a b c)) ; Length of each sublist
+
+;; Filtering
+(remove-if #'evenp '(1 2 3 4))    ; Remove evens
+(remove-if-not #'numberp mixed-list) ; Keep numbers</pre>
+
+      <h2>Association Lists</h2>
+      <pre class="code-example">;; Creating and using alists
+(setq alist '((a . 1) (b . 2)))
+(assoc 'a alist)         ; Find pair
+(rassoc 2 alist)         ; Reverse lookup
+(acons 'c 3 alist)       ; Add new pair</pre>
+    </div>
+    <div class="navigation-buttons">
+      <a href="functions.html" class="nav-button">← Back</a>
+      <a href="practice.html" class="nav-button">Next: Practice →</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

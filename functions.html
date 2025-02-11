@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lisp Functions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <div class="logo">Learn Lisp</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li><a href="functions.html" class="active">Functions</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="macros.html">Macros</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Functions in Lisp</h1>
+    <div class="lesson">
+      <h2>Function Definition</h2>
+      <pre class="code-example">;; Basic function
+(defun greet (name)
+  (format t "Hello, ~a!" name))
+
+;; Optional parameters
+(defun power (base &optional (exponent 2))
+  (expt base exponent))
+
+;; Keyword parameters
+(defun make-person (&key name (age 0) (city "Unknown"))
+  (list name age city))
+
+;; Rest parameters
+(defun sum (&rest numbers)
+  (apply #'+ numbers))</pre>
+
+      <h2>Lambda Functions</h2>
+      <pre class="code-example">;; Anonymous function
+(lambda (x) (* x x))
+
+;; Using lambda with mapcar
+(mapcar (lambda (x) (* x 2)) '(1 2 3 4))</pre>
+
+      <h2>Higher-Order Functions</h2>
+      <pre class="code-example">;; Function as parameter
+(defun apply-twice (f x)
+  (funcall f (funcall f x)))
+
+;; Using apply
+(apply #'+ '(1 2 3 4))  ; Same as (+ 1 2 3 4)
+
+;; Using funcall
+(funcall #'+ 1 2 3 4)</pre>
+
+      <h2>Recursion</h2>
+      <pre class="code-example">;; Factorial implementation
+(defun factorial (n)
+  (if (<= n 1)
+      1
+      (* n (factorial (- n 1)))))</pre>
+    </div>
+    <div class="navigation-buttons">
+      <a href="basics.html" class="nav-button">← Back</a>
+      <a href="lists.html" class="nav-button">Next: Lists →</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

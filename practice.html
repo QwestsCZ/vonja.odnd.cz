@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice Lisp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <div class="logo">Learn Lisp</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li><a href="functions.html">Functions</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="practice.html" class="active">Practice</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Practice Lisp</h1>
+    <div class="practice">
+      <h2>Practice Exercises</h2>
+      <div class="exercise">
+        <h3>Exercise 1: Basic Function</h3>
+        <p>Write a function that calculates the factorial of a number.</p>
+        <pre class="code-example">;; Example solution:
+(defun factorial (n)
+  (if (<= n 1)
+      1
+      (* n (factorial (- n 1)))))</pre>
+      </div>
+
+      <div class="exercise">
+        <h3>Exercise 2: List Processing</h3>
+        <p>Write a function that reverses a list without using the built-in reverse function.</p>
+        <pre class="code-example">;; Example solution:
+(defun my-reverse (lst)
+  (let ((result nil))
+    (dolist (elem lst result)
+      (push elem result))))</pre>
+      </div>
+
+      <h3>Try it yourself:</h3>
+      <textarea id="code-input" placeholder="Type your Lisp code here..."></textarea>
+      <button onclick="checkCode()">Check Code</button>
+      <div id="feedback"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

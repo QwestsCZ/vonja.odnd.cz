@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lisp Glossary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <div class="logo">Learn Lisp</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li><a href="functions.html">Functions</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="macros.html">Macros</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="glossary.html" class="active">Glossary</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Lisp Glossary</h1>
+    <div class="glossary-section">
+      <div id="s-expression" class="glossary-item">
+        <h3>S-expression</h3>
+        <p>Symbolic Expression - the basic building block of Lisp code. It consists of atoms or lists enclosed in parentheses, where the first element is typically an operator or function name.</p>
+      </div>
+      
+      <div id="atom" class="glossary-item">
+        <h3>Atom</h3>
+        <p>A basic unit in Lisp that's not a list. This includes numbers, symbols, and strings.</p>
+      </div>
+
+      <div id="cons" class="glossary-item">
+        <h3>Cons Cell</h3>
+        <p>A fundamental data structure in Lisp that consists of two parts: the car (first element) and the cdr (rest of the list).</p>
+      </div>
+
+      <div id="macro" class="glossary-item">
+        <h3>Macro</h3>
+        <p>A special type of function that operates on Lisp code itself, allowing for code transformation at compile time.</p>
+      </div>
+
+      <div id="lambda" class="glossary-item">
+        <h3>Lambda</h3>
+        <p>An anonymous function that can be defined and used without giving it a name.</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
